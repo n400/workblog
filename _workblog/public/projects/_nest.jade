@@ -1,0 +1,16 @@
+//- this is the project page (or gallery close-up) template
+.post-nest
+    .panel(style="background-image: url( '#{ base_url }#{ thumbnail }' )")
+        .hero-item
+            h1.h-wrap= title
+            h2: time.h-wrap= date
+    .written-content
+        != yield
+      //-      ////yields content of one project .md
+        // .google-authorship
+            != partial("../_shared/author")
+        //.comments
+        //    h1.slim thoughts?
+        //    h2 leave a comment
+        //    != partial("../_shared/comments")
+        ////    != partial("../_shared/blog-nav")

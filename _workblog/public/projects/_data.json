@@ -1,0 +1,35 @@
+{
+    "data": {
+        "title": "data",
+        "description": "optional description",
+        "thumbnail": "images/apt24w.jpg"
+    },
+    "dev": {
+        "title": "dev",
+        "description": "optional description",
+        "thumbnail": "images/apt24w.jpg"
+    },
+    "design": {
+        "title": "design",
+        "description": "optional description",
+        "thumbnail": "images/apt24w.jpg"
+    },
+    "writing": {
+        "title": "writing",
+        "description": "optional description",
+        "thumbnail": "images/apt24w.jpg"
+    },
+    "art": {
+        "title": "art",
+        "description": "optional description",
+        "thumbnail": "images/apt24w.jpg"
+    },
+    "contact": {
+        "title": "contact",
+        "description": "optional description",
+        "thumbnail": "images/apt24w.jpg"
+    }
+}
+
+
+

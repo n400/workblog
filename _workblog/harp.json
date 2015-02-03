@@ -1,0 +1,15 @@
+{
+    "basicAuth": [],
+    "globals": {
+        "site_title": "summer",
+        "tagline": "schrader",
+        "author": "summer schrader",
+        "description": "default desc. from /harp.json",
+        "base_url": "/",
+        "dev_url": "http://n400.github.io/workblog/",
+        "disqus": "n400",
+        "analytics_account": [],
+        "menuLabel": "HomeLabel",
+        "thumbnail": ""
+    }
+}
