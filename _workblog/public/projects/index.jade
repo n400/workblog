@@ -1,0 +1,30 @@
+style(type='text/css').
+    html {
+        background-image: url( '../images/apt24w.jpg' );
+        background-position: 28% 0;
+    background-repeat:no-repeat }
+
+//- TODO:
+    //1. refactor this (projects/index) and _shared/panels into one "teasers" function in partials so that it can also be used as a sidebar widget or something
+    //2. use it in: panels, masonry/gallery
+
+- function teaser(content) {
+    - if (content.indexOf("<!-- more -->") > -1) return content.split("<!-- more -->")[0];
+    - else if (content.indexOf("<!--more-->") > -1) return content.split("<!--more-->")[0];
+    - else return;
+    - }
+//-    - else if (content.indexOf("</img>") > -1) return content.split("<img>")[1].split("</img>")[0];
+    //  would return first image or defaults to all content.
+    // currently returns description from _data.json so that the single project can open with an image without that image appearing in the index
+.masonry
+    - for project, slug in public.projects._data
+        if(project.title && project.published!==false)
+            .panel(style="background-image: url( '#{ base_url }#{ project.thumbnail || thumbnail }' )")
+                    a(href="#{ base_url }projects/#{ slug }")
+                        .panel-content
+                            h2= project.title
+                        //- a(../projects/#{ slug })
+                            if teaser(partial("../projects/" + slug))
+                                != teaser(partial("../projects/" + slug))
+                            else if project.description
+                                p= project.description

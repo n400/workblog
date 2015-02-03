@@ -1,0 +1,19 @@
+!= partial("_shared/head")
+body
+    != partial("_shared/nav")
+  main(class="dir-#{ current.path[0] } #{ current.path.join('-') }")
+    if current.source === 'index' || current.path.length < 2
+        //- If it’s an index or in the root, yield the root index.jade
+        != yield
+            //yields root index
+
+    else
+        //- Otherwise, if it's a single post/project page, wrap it in its directory’s page template (_nest.jade)
+        != partial((current.path[current.path.length - 2] || '') + "/_nest")
+        //if disqus
+        //    != partial("_shared/comment-count")
+        //if analytics
+        //    != partial("_shared/analytics")
+  footer
+    != partial("_shared/footer")
+  != partial("_shared/nav")

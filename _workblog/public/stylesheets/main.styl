@@ -1,0 +1,32 @@
+// VARIABLES
+dark = rgba(0,0,0,.87)
+light = rgba(255,255,255,1)
+ltgrey = rgb(200, 205, 209)
+mdgrey = #94A1A8
+
+@import 'base/reset' //custom resets outside normalize
+@import 'base/normalize'
+@import 'typography/*' //needs cleaning up, need to set universal breakpoints
+@import 'modules/*'
+
+// GLOBALS
+*::-moz-selection {
+  color: light;
+  background: rgb(255,0,100);
+}
+*::selection {
+  color: light;
+  background: rgb(255,0,100);
+}
+
+//TODO:
+pre
+  background #4f4f4f
+  padding 2%
+  font-weight normal
+  font-family monospace
+  color white
+  border 3px solid #222
+  max-width 100%
+  white-space pre-wrap
+  word-break break-all

@@ -1,0 +1,15 @@
+header
+    .logo
+        a(href="/")
+            h1
+                span.top summer
+                span.bottom schrader&nbsp;
+    nav
+        ul
+            // activate this functionality after you fix the cross-browser text-clipping thing
+            // li(class="#{ current.path[0] == 'index' ? 'active' : 'inactive' }")
+                a(href="/") schrader
+            li(class="#{ current.path[0] == 'projects' ? 'active' : '' }")
+                a(href="/projects") work
+            li(class="#{ current.path[0] == 'posts' || current.path[0] == 'index' ? 'active' : '' }")
+                a(href="/posts") blog

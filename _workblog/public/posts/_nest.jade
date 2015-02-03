@@ -1,0 +1,14 @@
+// this is the single post page template
+
+.post-nest
+    .panel(style="background-image: url( #{ base_url }#{thumbnail} )")
+        .hero-content
+            h1.h-wrap= title
+            h2: time.h-wrap= date
+    .written-content
+        != yield
+            //yields body of post
+        // .google-authorship
+            != partial("../_shared/author")
+
+!= partial("../_shared/comments")

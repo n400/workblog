@@ -1,0 +1,11 @@
+.DS_Store
+*.swp
+Thumbs.db
+.Trashesar
+node_modules
+README.md
+*.log
+logs
+tmp
+/.idea/
+workspace.xml

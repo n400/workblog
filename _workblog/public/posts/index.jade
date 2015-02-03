@@ -1,0 +1,24 @@
+- function excerpt(content) {
+    - if (content.indexOf("<!-- more -->") > -1) return content.split("<!-- more -->")[0];
+    - else if (content.indexOf("<!--more-->") > -1) return content.split("<!--more-->")[0];
+    - else return;
+// options to return first paragraph or entire article as defaults. Currently returns description from _data.json so that the single post can open with an image without that image appearing on the home page. deal with this later with respect to the content
+//    - else if (content.indexOf("</p>") > -1) return content.split("<p>")[1].split("</p>")[0];
+//    - else if(content.indexOf("<!-- more -->") == -1) return content;
+- }
+- for post, slug in public.posts._data
+    if(post.title && post.published!==false)
+        .panel(style="background-image: url( '#{ base_url }#{ post.thumbnail || thumbnail }' )")
+            a(href="#{ base_url }posts/#{ slug }")
+                .hero-content
+                    .h-wrap
+                        h2= post.title
+                    div.excerpt: a(href="#{ base_url }posts/#{ slug }")
+                        if excerpt(partial("../posts/" + slug))
+                            != excerpt(partial("../posts/" + slug))
+                        else if post.description
+                            p= post.description
+                        h4: a(href="#{ base_url }posts/#{ slug }")
+                            time= post.date
+                            span.readmore
+                                &nbsp; Read More »

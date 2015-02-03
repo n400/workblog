@@ -1,0 +1,12 @@
+doctype
+html(lang="en", class="html-#{ current.path.join('-') } no-js")
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=3.0')
+    title= locals.title ? title + " | " + site_title : site_title
+    link(href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Slabo+27px|Slabo+13px|Vollkorn' rel='stylesheet' type='text/css')
+    link(rel="stylesheet" href="#{ base_url }stylesheets/main.css")
+    link(rel="shortcut icon" href="#{ base_url }images/favicon.ico")
+    meta(name="description" content="#{ description }")
+    script(type='text/javascript' src='#{ base_url }js/modernizr.js')
+    script(type='text/javascript' src='#{ base_url }js/glitch.js')
